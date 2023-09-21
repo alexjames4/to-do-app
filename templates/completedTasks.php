@@ -11,17 +11,10 @@
         <p class="h1 ps-2">To Do List</p>
         <div class="container">
             <ul class="list-group row col-12 offset-md-3 col-md-6">
-                <?php echo \ToDoApp\ViewHelpers\TasksViewHelper::getListOfUncompletedTasks($tasks); ?>
+                <?php echo \ToDoApp\ViewHelpers\TasksViewHelper::getListOfCompletedTasks($tasks); ?>
             </ul>
-            <form method="POST" action="/addNewTask">
-                <div class="mb-3 offset-md-3 col-md-6 mt-3">
-                    <label for="addNewTask" class="form-label">Add another task that you can put off for ages here</label>
-                    <input type="text" class="form-control" id="addNewTask" name="name" placeholder="Add New Task" value="<?php echo \ToDoApp\ViewHelpers\TasksViewHelper::handleTaskInputValue($editingTask);?>">
-                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
-                </div>
-            </form>
             <div class="mb-3 offset-md-4 col-md-4 mt-3">
-                <a href="/completedTasks" class="btn btn-outline-success">Show Completed Tasks</a>
+                <a href="/" class="btn btn-outline-success">Show outstanding tasks</a>
             </div>
         </div>
     </body>
