@@ -8,7 +8,10 @@ class TasksViewHelper
     {
         $output = '';
         foreach($tasks as $task) {
-            $output .= '<li class="list-group-item">' . $task->getName() . '</li>';
+            $output .=
+                '<li class="list-group-item">'
+                . $task->getName()
+                . '<a href="/markTaskCompleted/' . $task->getId() . '" class="btn btn-outline-success">Done</a></li>';
         };
         return $output;
     }

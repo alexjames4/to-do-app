@@ -5,13 +5,17 @@ namespace ToDoApp\Entities;
 class TaskEntity implements \JsonSerializable
 {
     private int $id;
+
     private string $name;
     private ?string $description;
 
     private ?string $deadline;
     private ?bool $completed;
 
-
+    public function getId(): int
+    {
+        return $this->id;
+    }
     public function getName(): string
     {
         return $this->name;

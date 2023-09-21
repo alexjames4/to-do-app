@@ -8,4 +8,5 @@ return function (App $app) {
 
     $app->get('/', \ToDoApp\Controllers\TaskController::class);
     $app->post('/addNewTask', \ToDoApp\Controllers\NewTaskController::class);
+    $app->get('/markTaskCompleted/{id}', \ToDoApp\Controllers\MarkTaskAsCompleteController::class);
 };
