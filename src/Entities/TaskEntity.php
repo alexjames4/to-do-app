@@ -6,21 +6,15 @@ class TaskEntity implements \JsonSerializable
 {
     private int $id;
     private string $name;
-    private string $description;
+    private ?string $description;
 
-    public function getId(): int
-    {
-        return $this->id;
-    }
+    private ?string $deadline;
+    private ?bool $completed;
+
 
     public function getName(): string
     {
         return $this->name;
-    }
-
-    public function getDescription(): string
-    {
-        return $this->description;
     }
 
     public function jsonSerialize(): array

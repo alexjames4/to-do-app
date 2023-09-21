@@ -6,5 +6,6 @@ use Slim\App;
 
 return function (App $app) {
 
-    $app->get('/tasks', \ToDoApp\Controllers\TaskController::class);
+    $app->get('/', \ToDoApp\Controllers\TaskController::class);
+    $app->post('/addNewTask', \ToDoApp\Controllers\NewTaskController::class);
 };
